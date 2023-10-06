@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="https://www.rubylouiserose.com/faircamp/feed.rss" rel="self" type="application/rss+xml"/>
+        <description><p>Transgender woman artist living and working in Helsinki</p>
+</description>
+        <image>
+    <link>https://www.rubylouiserose.com/faircamp/</link>
+    <title>Ruby Louise Rose</title>
+    <url>https://www.rubylouiserose.com/faircamp/feed.jpg</url>
+</image>
+        <language>en</language>
+        <lastBuildDate>Fri, 06 Oct 2023 13:29:44 +0000</lastBuildDate>
+        <link>https://www.rubylouiserose.com/faircamp/</link>
+        <title>Ruby Louise Rose</title>
+        
+        <item>
+    <description>A release by Ruby Louise Rose</description>
+    <guid>https://www.rubylouiserose.com/faircamp/extratone-studies</guid>
+    <link>https://www.rubylouiserose.com/faircamp/extratone-studies</link>
+    <title>Extratone Studies</title>
+</item>
+<item>
+    <description>A release by Ruby Louise Rose</description>
+    <guid>https://www.rubylouiserose.com/faircamp/hardcore-dysphoria</guid>
+    <link>https://www.rubylouiserose.com/faircamp/hardcore-dysphoria</link>
+    <title>Hardcore Dysphoria</title>
+</item>
+<item>
+    <description>A release by Ruby Louise Rose</description>
+    <guid>https://www.rubylouiserose.com/faircamp/sucker-variations</guid>
+    <link>https://www.rubylouiserose.com/faircamp/sucker-variations</link>
+    <title>Sucker Variations</title>
+</item>
+<item>
+    <description>A release by Ruby Louise Rose</description>
+    <guid>https://www.rubylouiserose.com/faircamp/vocal-feminisation-techniques</guid>
+    <link>https://www.rubylouiserose.com/faircamp/vocal-feminisation-techniques</link>
+    <title>Vocal Feminisation Techniques</title>
+</item>
+    </channel>
+</rss>
