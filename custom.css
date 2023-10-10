@@ -7,13 +7,6 @@
 // customize
 */
 
-@font-face {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Barlow'), url('barlow-v5-latin-regular.woff2') format('woff2');
-}
-
 .sv-theme {
   background-color: white;
 }
@@ -63,7 +56,7 @@ br {
 // layout and base styles
 */
 body {
-  font-family: 'Barlow';
+  font-family: Helvetica, Arial, sans-serif;
   color: black;
   -webkit-font-smoothing: antialiased;
 }
