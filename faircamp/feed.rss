@@ -10,7 +10,7 @@
     <url>https://www.rubylouiserose.com/faircamp/feed.jpg</url>
 </image>
         <language>en</language>
-        <lastBuildDate>Thu, 16 Nov 2023 14:55:59 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 17 Nov 2023 09:33:51 +0000</lastBuildDate>
         <link>https://www.rubylouiserose.com/faircamp/</link>
         <title>Ruby Louise Rose</title>
         
@@ -49,6 +49,12 @@
     <guid>https://www.rubylouiserose.com/faircamp/rave-studies</guid>
     <link>https://www.rubylouiserose.com/faircamp/rave-studies</link>
     <title>Rave Studies for FM Synthesis</title>
+</item>
+<item>
+    <description>A release by Ruby Louise Rose</description>
+    <guid>https://www.rubylouiserose.com/faircamp/cassette-damage</guid>
+    <link>https://www.rubylouiserose.com/faircamp/cassette-damage</link>
+    <title>Cassette Damage</title>
 </item>
     </channel>
 </rss>
