@@ -2,10 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <atom:link href="https://www.rubylouiserose.com/faircamp/feed.rss" rel="self" type="application/rss+xml"/>
-        <description>Transgender woman artist living and working in Turku, Finland</description>
+        <description>Transgender woman artist living and working in Turku, Finland
+
+Website: www.rubylouiserose.com
+Bluesky: @rubylouiserose.bsky.social
+Instagram: @rubylouiserose</description>
         
         <language>en</language>
-        <lastBuildDate>Thu, 18 Apr 2024 06:00:16 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 18 Apr 2024 10:10:43 +0000</lastBuildDate>
         <link>https://www.rubylouiserose.com/faircamp/</link>
         <title>Ruby Louise Rose</title>
         
@@ -38,6 +42,12 @@
     <guid>https://www.rubylouiserose.com/faircamp/my-hole</guid>
     <link>https://www.rubylouiserose.com/faircamp/my-hole</link>
     <title>Ruby Louise Rose – My Hole</title>
+</item>
+<item>
+    <description>The sound of the Korg Monotron Delay’s PT2399 echo processor chip and MS-20-based low-pass filter caught in an ever-evolving feedback loop.</description>
+    <guid>https://www.rubylouiserose.com/faircamp/ouroboros</guid>
+    <link>https://www.rubylouiserose.com/faircamp/ouroboros</link>
+    <title>Ruby Louise Rose – Ouroboros</title>
 </item>
     </channel>
 </rss>
