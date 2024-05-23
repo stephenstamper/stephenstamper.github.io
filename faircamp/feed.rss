@@ -11,7 +11,7 @@ Instagram: @rubylouiserose
 Made with Simon Repp's Faircamp</description>
         
         <language>en</language>
-        <lastBuildDate>Thu, 23 May 2024 10:15:33 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 23 May 2024 11:45:29 +0000</lastBuildDate>
         <link>https://www.rubylouiserose.com/faircamp/</link>
         <title>Ruby Louise Rose</title>
         
@@ -106,6 +106,12 @@ Guitar, bass and machines by Ruby Louise Rose. Vocal on "…but you're still an 
     <guid>https://www.rubylouiserose.com/faircamp/dust-cleaner</guid>
     <link>https://www.rubylouiserose.com/faircamp/dust-cleaner</link>
     <title>Futura 2200 – Dust-Cleaner</title>
+</item>
+<item>
+    <description>Visit rubylouiserose.com for a detailed description of each piece.</description>
+    <guid>https://www.rubylouiserose.com/faircamp/rubylouiserose-com</guid>
+    <link>https://www.rubylouiserose.com/faircamp/rubylouiserose-com</link>
+    <title>Ruby Louise Rose – rubylouiserose.com</title>
 </item>
     </channel>
 </rss>
