@@ -1,32 +1,33 @@
-// TODO: alt/text and markup for the play/pause icon could drift away
-// from how we write/implement it in our statically generated code.
-const rootPrefix = document.querySelector('script[data-root-prefix').dataset.rootPrefix;
-const loadingIcon = `<img alt="Loading" src="${rootPrefix}loading.svg" style="max-width: 1em;">`;
-const pauseIcon = `<img alt="Pause" src="${rootPrefix}pause.svg" style="max-width: 1em;">`;
-const playIcon = `<img alt="Play" src="${rootPrefix}play.svg" style="max-width: 1em;">`;
+const loadingIcon = document.querySelector('#loading_icon');
+const pauseIcon = document.querySelector('#pause_icon');
+const playIcon = document.querySelector('#play_icon');
 
 const copyNotificationTimeouts = {};
 
 window.activeTrack = null;
 
-function copyToClipboard(copyLink) {
+function copyToClipboard(button) {
     const notify = (success, content) => {
         if (content in copyNotificationTimeouts) {
             clearTimeout(copyNotificationTimeouts[content]);
             delete copyNotificationTimeouts[content];
         }
 
-        copyLink.classList.toggle('confirmed', success);
-        copyLink.classList.toggle('failed', !success);
+        if (success) {
+            const successIcon = button.querySelector('[data-icon="success"]');
+            button.querySelector('.icon').replaceChildren(successIcon.content.cloneNode(true));
+        } else {
+            const failedIcon = button.querySelector('[data-icon="failed"]');
+            button.querySelector('.icon').replaceChildren(failedIcon.content.cloneNode(true));
+        }
 
         copyNotificationTimeouts[content] = setTimeout(() => {
-            copyLink.classList.remove(success ? 'confirmed' : 'failed');
+            const copyIcon = button.querySelector('[data-icon="copy"]');
+            button.querySelector('.icon').replaceChildren(copyIcon.content.cloneNode(true));
         }, 3000);
     };
 
-    const content = copyLink.dataset.content ||
-        document.querySelector('[data-url]').getAttribute('href');
-
+    const content = button.dataset.content;
     navigator.clipboard
         .writeText(content)
         .then(() => notify(true, content))
@@ -36,10 +37,13 @@ function copyToClipboard(copyLink) {
 function formatTime(seconds) {
     if (seconds < 60) {
         return `0:${Math.floor(seconds).toString().padStart(2, '0')}`;
-    } else if (seconds < 3600) {
-        return `${Math.floor(seconds / 60)}:${Math.floor(seconds % 60).toString().padStart(2, '0')}`;
     } else {
-        return `${Math.floor(seconds % 3600)}:${Math.floor((seconds % 3600) / 60)}:${Math.floor(seconds % 60).toString().padStart(2, '0')}`;
+        const secondsFormatted = Math.floor(seconds % 60).toString().padStart(2, '0');
+        if (seconds < 3600) {
+            return `${Math.floor(seconds / 60)}:${secondsFormatted}`;
+        } else {
+            return `${Math.floor(seconds / 3600)}:${Math.floor((seconds % 3600) / 60).toString().padStart(2, '0')}:${secondsFormatted}`;
+        }
     }
 }
 
@@ -48,7 +52,7 @@ async function mountAndPlay(container, seek) {
     const audio = container.querySelector('audio');
     const controlsInner = container.querySelector('.track_controls.inner');
     const controlsOuter = container.querySelector('.track_controls.outer');
-    const svg = container.querySelector('svg');
+    const svg = container.querySelector('.waveform');
     const time = container.querySelector('.track_time');
 
     // The .duration property on the audio element is unreliable because during
@@ -71,8 +75,9 @@ async function mountAndPlay(container, seek) {
 
     if (audio.readyState === audio.HAVE_NOTHING) {
         container.classList.add('active');
-        controlsInner.innerHTML = loadingIcon;
-        controlsOuter.innerHTML = loadingIcon;
+        controlsInner.replaceChildren(loadingIcon.content.cloneNode(true));
+        controlsOuter.replaceChildren(loadingIcon.content.cloneNode(true));
+
         window.activeTrack = {
             a,
             audio,
@@ -113,8 +118,8 @@ async function mountAndPlay(container, seek) {
                 clearInterval(window.activeTrack.updatePlayHeadInterval);
                 updatePlayhead(window.activeTrack, true);
                 container.classList.remove('active', 'playing');
-                controlsInner.innerHTML = playIcon;
-                controlsOuter.innerHTML = playIcon;
+                controlsInner.replaceChildren(playIcon.content.cloneNode(true));
+                controlsOuter.replaceChildren(playIcon.content.cloneNode(true));
                 
                 const nextContainer = container.nextElementSibling;
                 if (nextContainer && nextContainer.classList.contains('track')) {
@@ -127,8 +132,8 @@ async function mountAndPlay(container, seek) {
     }
 
     container.classList.add('active', 'playing');
-    controlsInner.innerHTML = pauseIcon;
-    controlsOuter.innerHTML = pauseIcon;
+    controlsInner.replaceChildren(pauseIcon.content.cloneNode(true));
+    controlsOuter.replaceChildren(pauseIcon.content.cloneNode(true));
 
     if (seek) {
         audio.currentTime = seek * duration();
@@ -175,8 +180,8 @@ function togglePlayback(container = null, seek = null) {
                     activeTrack.audio.currentTime = seek * activeTrack.duration();
                 }
                 activeTrack.container.classList.add('playing');
-                activeTrack.controlsInner.innerHTML = pauseIcon;
-                activeTrack.controlsOuter.innerHTML = pauseIcon;
+                activeTrack.controlsInner.replaceChildren(pauseIcon.content.cloneNode(true));
+                activeTrack.controlsOuter.replaceChildren(pauseIcon.content.cloneNode(true));
                 activeTrack.audio.play();
                 activeTrack.updatePlayHeadInterval = setInterval(
                     () => updatePlayhead(activeTrack),
@@ -191,8 +196,8 @@ function togglePlayback(container = null, seek = null) {
                     clearInterval(activeTrack.updatePlayHeadInterval);
                     updatePlayhead(activeTrack);
                     activeTrack.container.classList.remove('playing');
-                    activeTrack.controlsInner.innerHTML = playIcon;
-                    activeTrack.controlsOuter.innerHTML = playIcon;
+                    activeTrack.controlsInner.replaceChildren(playIcon.content.cloneNode(true));
+                    activeTrack.controlsOuter.replaceChildren(playIcon.content.cloneNode(true));
                 }
             }
         } else {
@@ -203,8 +208,8 @@ function togglePlayback(container = null, seek = null) {
             activeTrack.audio.currentTime = 0;
             updatePlayhead(activeTrack, true);
             activeTrack.container.classList.remove('active', 'playing');
-            activeTrack.controlsInner.innerHTML = playIcon;
-            activeTrack.controlsOuter.innerHTML = playIcon;
+            activeTrack.controlsInner.replaceChildren(playIcon.content.cloneNode(true));
+            activeTrack.controlsOuter.replaceChildren(playIcon.content.cloneNode(true));
 
             mountAndPlay(container, seek);
         }
@@ -411,29 +416,16 @@ window.addEventListener('DOMContentLoaded', event => {
         window.addEventListener('resize', waveforms);
     }
 
-    const shareOverlay = document.querySelector('#share');
-
     if (navigator.clipboard) {
-        for (const copyLink of document.querySelectorAll('[data-copy]')) {
-            copyLink.classList.remove('disabled');
-            copyLink.removeAttribute('title');
+        for (button of document.querySelectorAll('[data-copy]')) {
+            if (!button.dataset.content) {
+                const thisPageUrl = window.location.href.split('#')[0]; // discard hash if present
+                button.dataset.content = thisPageUrl;
+            }
         }
-    }
-
-    if (shareOverlay) {
-        const disabledShareLink = document.querySelector('[data-disabled-share]');
-        if (disabledShareLink) {
-            disabledShareLink.classList.remove('disabled');
-            disabledShareLink.removeAttribute('data-disabled-share');
-            disabledShareLink.removeAttribute('title');
-            disabledShareLink.setAttribute('href', '#share');
-        }
-
-        const shareUrl = shareOverlay.querySelector('[data-url]');
-        if (!shareUrl.getAttribute('href').length) {
-            const url = window.location.href.split('#')[0]; // discard hash if present
-            shareUrl.setAttribute('href', url);
-            shareUrl.innerHTML = url;
+    } else {
+        for (button of document.querySelectorAll('[data-copy]')) {
+            button.remove();
         }
     }
 });
