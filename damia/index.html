@@ -30,6 +30,7 @@
         <h1>My Web Page</h1>
         <div>For more info about usage (how to interact with the patch), you can open this HTML file in a code editor.</div>
         <button onclick="sendMsgToWebPd('n_0_70', '0', [1])">Begin</button>
+        <button onclick="sendMsgToWebPd('n_0_70', '0', [0])">End</button>
         <button id="start"> Start </button>
         <div id="loading"> Loading ... </div>
         <script src="webpd-runtime.js"></script>
@@ -58,7 +59,7 @@
                 patch = await response.text()
 
                 // Comment this if you don't need audio input
-                stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+                // stream = await navigator.mediaDevices.getUserMedia({ audio: true })
 
                 // Hide loading and show start button
                 loadingDiv.style.display = 'none'
@@ -86,8 +87,8 @@
                 webpdNode.connect(audioContext.destination)
 
                 // Comment this if you don't need audio input
-                const sourceNode = audioContext.createMediaStreamSource(stream)
-                sourceNode.connect(webpdNode)
+                // const sourceNode = audioContext.createMediaStreamSource(stream)
+                // sourceNode.connect(webpdNode)
 
                 // Hide the start button
                 startButton.style.display = 'none'
