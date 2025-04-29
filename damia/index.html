@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>WebPd boilerplate</title>
+        <title>Damiá Modal Music Machine</title>
         <style>
             #start {
                 display: none;
@@ -27,11 +27,17 @@
         </style>
     </head>
     <body>
-        <h1>My Web Page</h1>
-        <div>For more info about usage (how to interact with the patch), you can open this HTML file in a code editor.</div>
-        <button onclick="sendMsgToWebPd('n_0_70', '0', [1])">Begin</button>
-        <button onclick="sendMsgToWebPd('n_0_70', '0', [0])">End</button>
-        <a onclick="sendMsgToWebPd('n_0_70', '0', [1])">Begin</a>
+        <h1>Damiá Modal Music Machine</h1>
+        <p><button onclick="sendMsgToWebPd('n_0_70', '0', [1])">Begin</button></p>
+        <p><button onclick="sendMsgToWebPd('n_0_70', '0', [0])">End</button></p>
+        <p><button onclick="sendMsgToWebPd('n_0_100', '0', ['bang'])">Giaale</button></p>
+        <p><button onclick="sendMsgToWebPd('n_0_101', '0', ['bang'])">Mera</button></p>
+        <p><button onclick="sendMsgToWebPd('n_0_102', '0', ['bang'])">Poan</button></p>
+        <p><button onclick="sendMsgToWebPd('n_0_103', '0', ['bang'])">Maisia</button></p>
+        <p><button onclick="sendMsgToWebPd('n_0_104', '0', ['bang'])">Bagat</button></p>
+        <p><button onclick="sendMsgToWebPd('n_0_105', '0', ['bang'])">Mazand</button></p>
+        <p><button onclick="sendMsgToWebPd('n_0_106', '0', ['bang'])">Rastad</button></p>
+        
         <button id="start"> Start </button>
         <div id="loading"> Loading ... </div>
         <script src="webpd-runtime.js"></script>
