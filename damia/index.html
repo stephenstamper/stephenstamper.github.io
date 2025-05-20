@@ -58,8 +58,8 @@ small {
 <body>
 
         <h1>damiá modal music machine</h1>
-        <p><a onclick="sendMsgToWebPd('n_0_100', '0', ['bang'])">get giaale</a> | <a onclick="sendMsgToWebPd('n_0_101', '0', ['bang'])">get merá</a> | <a onclick="sendMsgToWebPd('n_0_102', '0', ['bang'])">get poan</a> | <a onclick="sendMsgToWebPd('n_0_103', '0', ['bang'])">get maisia</a> | <a onclick="sendMsgToWebPd('n_0_104', '0', ['bang'])">get bagat</a> | <a onclick="sendMsgToWebPd('n_0_105', '0', ['bang'])">get mazand</a> | <a onclick="sendMsgToWebPd('n_0_106', '0', ['bang'])">get rastad</a></p>
-        <p><a onclick="sendMsgToWebPd('n_0_70', '0', [1])">begin</a> | <a onclick="sendMsgToWebPd('n_0_70', '0', [0])">end</a></p>
+        <p><a onclick="sendMsgToWebPd('n_0_4', '0', ['bang'])">get giaale</a> | <a onclick="sendMsgToWebPd('n_0_5', '0', ['bang'])">get merá</a> | <a onclick="sendMsgToWebPd('n_0_6', '0', ['bang'])">get poan</a> | <a onclick="sendMsgToWebPd('n_0_7', '0', ['bang'])">get maisia</a> | <a onclick="sendMsgToWebPd('n_0_8', '0', ['bang'])">get bagat</a> | <a onclick="sendMsgToWebPd('n_0_9', '0', ['bang'])">get mazand</a> | <a onclick="sendMsgToWebPd('n_0_10', '0', ['bang'])">get rastad</a></p>
+        <p><a onclick="sendMsgToWebPd('n_0_0', '0', [1])">begin</a> | <a onclick="sendMsgToWebPd('n_0_0', '0', [0])">end</a></p>
         <p><small>made with <a href="https://puredata.info/" target="_blank">pure data</a> &amp; <a href="https://sebpiq.github.io/WebPd_website/" target="_blank">webpd</a></small></p>
         <button id="start"> Start </button>
         <div id="loading"> Loading ... </div>
@@ -162,65 +162,65 @@ small {
             
             // Here is an index of objects IDs to which you can send messages, with hints so you can find the right ID.
             // Note that by default only GUI objects (bangs, sliders, etc ...) are available.
-            //  - nodeId "n_0_70" portletId "0"
+            //  - nodeId "n_0_0" portletId "0"
             //      * type "tgl"
-            //      * position 35 30
-            //      * label "start/stop"
+            //      * position 41 31
+            //      * label "on/off"
             
-            //  - nodeId "n_0_100" portletId "0"
+            //  - nodeId "n_0_4" portletId "0"
             //      * type "bang"
-            //      * position 35 53
-            //      * label "get\ giaale"
+            //      * position 377 53
+            //      * label "get_giaale"
             
-            //  - nodeId "n_0_101" portletId "0"
+            //  - nodeId "n_0_5" portletId "0"
             //      * type "bang"
-            //      * position 35 76
-            //      * label "get\ mera"
+            //      * position 377 76
+            //      * label "get_mera"
             
-            //  - nodeId "n_0_102" portletId "0"
+            //  - nodeId "n_0_6" portletId "0"
             //      * type "bang"
-            //      * position 35 99
-            //      * label "get\ poan"
+            //      * position 377 99
+            //      * label "get_poan"
             
-            //  - nodeId "n_0_103" portletId "0"
+            //  - nodeId "n_0_7" portletId "0"
             //      * type "bang"
-            //      * position 35 122
-            //      * label "get\ maisia"
+            //      * position 377 122
+            //      * label "get_maisia"
             
-            //  - nodeId "n_0_104" portletId "0"
+            //  - nodeId "n_0_8" portletId "0"
             //      * type "bang"
-            //      * position 35 145
-            //      * label "get\ bagat"
+            //      * position 377 145
+            //      * label "get_bagat"
             
-            //  - nodeId "n_0_105" portletId "0"
+            //  - nodeId "n_0_9" portletId "0"
             //      * type "bang"
-            //      * position 35 168
-            //      * label "get\ mazand"
+            //      * position 377 168
+            //      * label "get_mazand"
             
-            //  - nodeId "n_0_106" portletId "0"
+            //  - nodeId "n_0_10" portletId "0"
             //      * type "bang"
-            //      * position 35 191
-            //      * label "get\ rastad"
+            //      * position 377 191
+            //      * label "get_rastad"
             
-            //  - nodeId "n_0_60" portletId "0"
-            //      * type "send"
-            //      * send "note2"
+            //  - nodeId "n_0_26" portletId "0"
+            //      * type "bang"
+            //      * position 41 123
             
-            //  - nodeId "n_0_67" portletId "0"
-            //      * type "send"
-            //      * send "note3"
-            
-            //  - nodeId "n_0_68" portletId "0"
+            //  - nodeId "n_0_11" portletId "0"
             //      * type "send"
             //      * send "note1"
             
-            //  - nodeId "n_0_95" portletId "0"
+            //  - nodeId "n_0_12" portletId "0"
             //      * type "send"
-            //      * send "note4"
+            //      * send "note2"
             
-            //  - nodeId "n_0_117" portletId "0"
+            //  - nodeId "n_0_13" portletId "0"
             //      * type "send"
-            //      * send "SEED"
+            //      * send "note3"
+            
+            //  - nodeId "n_0_29" portletId "0"
+            //      * type "send"
+            //      * send "trig"
             
 
             // ------------- 3. SENDING MESSAGES FROM THE PATCH TO JAVASCRIPT
@@ -234,110 +234,96 @@ small {
             // - portletId : the ID of the object portlet that is sending the message.
             // - message : the message that was sent. It is a list of strings and / or numbers.
             const receiveMsgFromWebPd = (nodeId, portletId, message) => {
-                if (nodeId === "n_0_70" && portletId === "0") {
+                if (nodeId === "n_0_0" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_70" portletId "0"\n'
+                        + '	* nodeId "n_0_0" portletId "0"\n'
                         + '	* type "tgl"\n'
-                        + '	* position 35 30\n'
-                        + '	* label "start/stop"'
+                        + '	* position 41 31\n'
+                        + '	* label "on/off"'
                     )
                 }
-                if (nodeId === "n_0_100" && portletId === "0") {
+                if (nodeId === "n_0_4" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_100" portletId "0"\n'
+                        + '	* nodeId "n_0_4" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 35 53\n'
-                        + '	* label "get\ giaale"'
+                        + '	* position 377 53\n'
+                        + '	* label "get_giaale"'
                     )
                 }
-                if (nodeId === "n_0_101" && portletId === "0") {
+                if (nodeId === "n_0_5" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_101" portletId "0"\n'
+                        + '	* nodeId "n_0_5" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 35 76\n'
-                        + '	* label "get\ mera"'
+                        + '	* position 377 76\n'
+                        + '	* label "get_mera"'
                     )
                 }
-                if (nodeId === "n_0_102" && portletId === "0") {
+                if (nodeId === "n_0_6" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_102" portletId "0"\n'
+                        + '	* nodeId "n_0_6" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 35 99\n'
-                        + '	* label "get\ poan"'
+                        + '	* position 377 99\n'
+                        + '	* label "get_poan"'
                     )
                 }
-                if (nodeId === "n_0_103" && portletId === "0") {
+                if (nodeId === "n_0_7" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_103" portletId "0"\n'
+                        + '	* nodeId "n_0_7" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 35 122\n'
-                        + '	* label "get\ maisia"'
+                        + '	* position 377 122\n'
+                        + '	* label "get_maisia"'
                     )
                 }
-                if (nodeId === "n_0_104" && portletId === "0") {
+                if (nodeId === "n_0_8" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_104" portletId "0"\n'
+                        + '	* nodeId "n_0_8" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 35 145\n'
-                        + '	* label "get\ bagat"'
+                        + '	* position 377 145\n'
+                        + '	* label "get_bagat"'
                     )
                 }
-                if (nodeId === "n_0_105" && portletId === "0") {
+                if (nodeId === "n_0_9" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_105" portletId "0"\n'
+                        + '	* nodeId "n_0_9" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 35 168\n'
-                        + '	* label "get\ mazand"'
+                        + '	* position 377 168\n'
+                        + '	* label "get_mazand"'
                     )
                 }
-                if (nodeId === "n_0_106" && portletId === "0") {
+                if (nodeId === "n_0_10" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_106" portletId "0"\n'
+                        + '	* nodeId "n_0_10" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 35 191\n'
-                        + '	* label "get\ rastad"'
+                        + '	* position 377 191\n'
+                        + '	* label "get_rastad"'
                     )
                 }
-                if (nodeId === "n_0_71" && portletId === "0") {
+                if (nodeId === "n_0_26" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_71" portletId "0"\n'
+                        + '	* nodeId "n_0_26" portletId "0"\n'
+                        + '	* type "bang"\n'
+                        + '	* position 41 123\n'
+                    )
+                }
+                if (nodeId === "n_0_14" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_14" portletId "0"\n'
                         + '	* type "receive"\n'
                         + '	* receive "note1"'
                     )
                 }
-                if (nodeId === "n_0_73" && portletId === "0") {
+                if (nodeId === "n_0_16" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_73" portletId "0"\n'
+                        + '	* nodeId "n_0_16" portletId "0"\n'
                         + '	* type "receive"\n'
                         + '	* receive "note2"'
                     )
                 }
-                if (nodeId === "n_0_78" && portletId === "0") {
+                if (nodeId === "n_0_19" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_78" portletId "0"\n'
+                        + '	* nodeId "n_0_19" portletId "0"\n'
                         + '	* type "receive"\n'
                         + '	* receive "note3"'
-                    )
-                }
-                if (nodeId === "n_0_96" && portletId === "0") {
-                    console.log('Message received from :\n'
-                        + '	* nodeId "n_0_96" portletId "0"\n'
-                        + '	* type "receive"\n'
-                        + '	* receive "note4"'
-                    )
-                }
-                if (nodeId === "n_0_99" && portletId === "0") {
-                    console.log('Message received from :\n'
-                        + '	* nodeId "n_0_99" portletId "0"\n'
-                        + '	* type "receive"\n'
-                        + '	* receive "start"'
-                    )
-                }
-                if (nodeId === "n_0_109" && portletId === "0") {
-                    console.log('Message received from :\n'
-                        + '	* nodeId "n_0_109" portletId "0"\n'
-                        + '	* type "receive"\n'
-                        + '	* receive "start"'
                     )
                 }                
             }
