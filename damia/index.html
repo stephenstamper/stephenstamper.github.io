@@ -164,47 +164,67 @@ small {
             // Note that by default only GUI objects (bangs, sliders, etc ...) are available.
             //  - nodeId "n_0_0" portletId "0"
             //      * type "tgl"
-            //      * position 41 31
+            //      * position 41 144
             //      * label "on/off"
             
             //  - nodeId "n_0_4" portletId "0"
             //      * type "bang"
-            //      * position 377 53
+            //      * position 356 166
             //      * label "get_giaale"
             
             //  - nodeId "n_0_5" portletId "0"
             //      * type "bang"
-            //      * position 377 76
+            //      * position 356 189
             //      * label "get_mera"
             
             //  - nodeId "n_0_6" portletId "0"
             //      * type "bang"
-            //      * position 377 99
+            //      * position 356 212
             //      * label "get_poan"
             
             //  - nodeId "n_0_7" portletId "0"
             //      * type "bang"
-            //      * position 377 122
+            //      * position 356 235
             //      * label "get_maisia"
             
             //  - nodeId "n_0_8" portletId "0"
             //      * type "bang"
-            //      * position 377 145
+            //      * position 356 258
             //      * label "get_bagat"
             
             //  - nodeId "n_0_9" portletId "0"
             //      * type "bang"
-            //      * position 377 168
+            //      * position 356 281
             //      * label "get_mazand"
             
             //  - nodeId "n_0_10" portletId "0"
             //      * type "bang"
-            //      * position 377 191
+            //      * position 356 304
             //      * label "get_rastad"
             
-            //  - nodeId "n_0_26" portletId "0"
-            //      * type "bang"
-            //      * position 41 123
+            //  - nodeId "n_0_35" portletId "0"
+            //      * type "msg"
+            //      * position 113 75
+            
+            //  - nodeId "n_0_36" portletId "0"
+            //      * type "msg"
+            //      * position 158 75
+            
+            //  - nodeId "n_0_37" portletId "0"
+            //      * type "msg"
+            //      * position 203 75
+            
+            //  - nodeId "n_0_43" portletId "0"
+            //      * type "msg"
+            //      * position 56 305
+            
+            //  - nodeId "n_0_44" portletId "0"
+            //      * type "msg"
+            //      * position 101 305
+            
+            //  - nodeId "n_0_45" portletId "0"
+            //      * type "msg"
+            //      * position 146 305
             
             //  - nodeId "n_0_11" portletId "0"
             //      * type "send"
@@ -218,7 +238,7 @@ small {
             //      * type "send"
             //      * send "note3"
             
-            //  - nodeId "n_0_29" portletId "0"
+            //  - nodeId "n_0_23" portletId "0"
             //      * type "send"
             //      * send "trig"
             
@@ -238,7 +258,7 @@ small {
                     console.log('Message received from :\n'
                         + '	* nodeId "n_0_0" portletId "0"\n'
                         + '	* type "tgl"\n'
-                        + '	* position 41 31\n'
+                        + '	* position 41 144\n'
                         + '	* label "on/off"'
                     )
                 }
@@ -246,7 +266,7 @@ small {
                     console.log('Message received from :\n'
                         + '	* nodeId "n_0_4" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 377 53\n'
+                        + '	* position 356 166\n'
                         + '	* label "get_giaale"'
                     )
                 }
@@ -254,7 +274,7 @@ small {
                     console.log('Message received from :\n'
                         + '	* nodeId "n_0_5" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 377 76\n'
+                        + '	* position 356 189\n'
                         + '	* label "get_mera"'
                     )
                 }
@@ -262,7 +282,7 @@ small {
                     console.log('Message received from :\n'
                         + '	* nodeId "n_0_6" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 377 99\n'
+                        + '	* position 356 212\n'
                         + '	* label "get_poan"'
                     )
                 }
@@ -270,7 +290,7 @@ small {
                     console.log('Message received from :\n'
                         + '	* nodeId "n_0_7" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 377 122\n'
+                        + '	* position 356 235\n'
                         + '	* label "get_maisia"'
                     )
                 }
@@ -278,7 +298,7 @@ small {
                     console.log('Message received from :\n'
                         + '	* nodeId "n_0_8" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 377 145\n'
+                        + '	* position 356 258\n'
                         + '	* label "get_bagat"'
                     )
                 }
@@ -286,7 +306,7 @@ small {
                     console.log('Message received from :\n'
                         + '	* nodeId "n_0_9" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 377 168\n'
+                        + '	* position 356 281\n'
                         + '	* label "get_mazand"'
                     )
                 }
@@ -294,15 +314,50 @@ small {
                     console.log('Message received from :\n'
                         + '	* nodeId "n_0_10" portletId "0"\n'
                         + '	* type "bang"\n'
-                        + '	* position 377 191\n'
+                        + '	* position 356 304\n'
                         + '	* label "get_rastad"'
                     )
                 }
-                if (nodeId === "n_0_26" && portletId === "0") {
+                if (nodeId === "n_0_35" && portletId === "0") {
                     console.log('Message received from :\n'
-                        + '	* nodeId "n_0_26" portletId "0"\n'
-                        + '	* type "bang"\n'
-                        + '	* position 41 123\n'
+                        + '	* nodeId "n_0_35" portletId "0"\n'
+                        + '	* type "msg"\n'
+                        + '	* position 113 75\n'
+                    )
+                }
+                if (nodeId === "n_0_36" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_36" portletId "0"\n'
+                        + '	* type "msg"\n'
+                        + '	* position 158 75\n'
+                    )
+                }
+                if (nodeId === "n_0_37" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_37" portletId "0"\n'
+                        + '	* type "msg"\n'
+                        + '	* position 203 75\n'
+                    )
+                }
+                if (nodeId === "n_0_43" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_43" portletId "0"\n'
+                        + '	* type "msg"\n'
+                        + '	* position 56 305\n'
+                    )
+                }
+                if (nodeId === "n_0_44" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_44" portletId "0"\n'
+                        + '	* type "msg"\n'
+                        + '	* position 101 305\n'
+                    )
+                }
+                if (nodeId === "n_0_45" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_45" portletId "0"\n'
+                        + '	* type "msg"\n'
+                        + '	* position 146 305\n'
                     )
                 }
                 if (nodeId === "n_0_14" && portletId === "0") {
@@ -324,6 +379,62 @@ small {
                         + '	* nodeId "n_0_19" portletId "0"\n'
                         + '	* type "receive"\n'
                         + '	* receive "note3"'
+                    )
+                }
+                if (nodeId === "n_0_27" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_27" portletId "0"\n'
+                        + '	* type "receive"\n'
+                        + '	* receive "neba"'
+                    )
+                }
+                if (nodeId === "n_0_28" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_28" portletId "0"\n'
+                        + '	* type "receive"\n'
+                        + '	* receive "saba"'
+                    )
+                }
+                if (nodeId === "n_0_29" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_29" portletId "0"\n'
+                        + '	* type "receive"\n'
+                        + '	* receive "reba"'
+                    )
+                }
+                if (nodeId === "n_0_30" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_30" portletId "0"\n'
+                        + '	* type "receive"\n'
+                        + '	* receive "trig"'
+                    )
+                }
+                if (nodeId === "n_0_39" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_39" portletId "0"\n'
+                        + '	* type "receive"\n'
+                        + '	* receive "neba"'
+                    )
+                }
+                if (nodeId === "n_0_40" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_40" portletId "0"\n'
+                        + '	* type "receive"\n'
+                        + '	* receive "saba"'
+                    )
+                }
+                if (nodeId === "n_0_41" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_41" portletId "0"\n'
+                        + '	* type "receive"\n'
+                        + '	* receive "reba"'
+                    )
+                }
+                if (nodeId === "n_0_42" && portletId === "0") {
+                    console.log('Message received from :\n'
+                        + '	* nodeId "n_0_42" portletId "0"\n'
+                        + '	* type "receive"\n'
+                        + '	* receive "trig"'
                     )
                 }                
             }
