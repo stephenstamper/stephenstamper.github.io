@@ -11,13 +11,21 @@
 <style>
 #start {
     display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #loading {
-}
-
-* {
-    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -25,7 +33,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.0;
     hyphens: none;
     color: rgba(5, 38, 6, 0.8);
     text-align: center;
@@ -45,45 +53,16 @@ h1, h2, h3, h4, h5, h6 {
 small {
     font-size: 14px;
 }
-
-.row {  
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.side {
-    flex: 30%;
-}
-
-.main {
-    flex: 40%;
-}
-
-@media screen and (max-width: 1024px) {
-    .row {   
-        flex-direction: column;
-    }
-    body {
-        font-size: 16px;
-    }
-    small {
-        font-size: 12px;
-    }
-}
 </style>
 </head>
 <body>
-<div class="row">
-    <div class="side">
-    </div>
-    <div class="main">
 
         <h1>damiá modal music machine</h1>
         <p><a onclick="sendMsgToWebPd('n_0_4', '0', ['bang'])">get giaale</a> | <a onclick="sendMsgToWebPd('n_0_5', '0', ['bang'])">get merá</a> | <a onclick="sendMsgToWebPd('n_0_6', '0', ['bang'])">get poan</a> | <a onclick="sendMsgToWebPd('n_0_7', '0', ['bang'])">get maisia</a> | <a onclick="sendMsgToWebPd('n_0_8', '0', ['bang'])">get bagat</a> | <a onclick="sendMsgToWebPd('n_0_9', '0', ['bang'])">get mazand</a> | <a onclick="sendMsgToWebPd('n_0_10', '0', ['bang'])">get rastad</a></p>
         <p><a onclick="sendMsgToWebPd('n_0_0', '0', [1])">begin</a> | <a onclick="sendMsgToWebPd('n_0_0', '0', [0])">end</a></p>
         <p><small>made with <a href="https://puredata.info/" target="_blank">pure data</a> &amp; <a href="https://sebpiq.github.io/WebPd_website/" target="_blank">webpd</a></small></p>
-        <p><a id="start">start</a></p>
-        <p id="loading">loading...</p>
+        <button id="start"> Start </button>
+        <div id="loading"> Loading ... </div>
         <script src="webpd-runtime.js"></script>
         <script>
             // SUMMARY
@@ -462,9 +441,5 @@ small {
 
         </script>
 
-    </div>
-    <div class="side">
-    </div>
-</div>
 </body>
 </html>
