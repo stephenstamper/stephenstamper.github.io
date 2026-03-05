@@ -24,7 +24,7 @@ audio {width: 100%;}
 <pre>
 <span id="000">+--------------------------------------------------------------------+</span>
 |                                                                    |
-|  Extended Play                                 [<a href="https://www.rubylouiserose.com" target="_blank">Ruby Louise Rose</a>]  |
+|  Extended <a href="#" id="audioControl">Play </a>                                [<a href="https://www.rubylouiserose.com" target="_blank">Ruby Louise Rose</a>]  |
 |                                                                    |
 +--------------------------------------------------------------------+
 <audio id="yourAudio" preload="auto">
@@ -32,8 +32,6 @@ audio {width: 100%;}
     <source src="extendedplay.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
-<a href="#" id="audioControl">Play</a>
-
 00:00 ............................................... Fun with Numbers
 03:30 ............................................ Fun with Tambourine
 06:56 .................................................. Fun with Acid
@@ -50,7 +48,7 @@ ctrl.onclick = function () {
 
     // Update the Button
     var pause = ctrl.innerHTML === 'Pause';
-    ctrl.innerHTML = pause ? 'Play' : 'Pause';
+    ctrl.innerHTML = pause ? 'Play ' : 'Pause';
 
     // Update the Audio
     var method = pause ? 'pause' : 'play';
