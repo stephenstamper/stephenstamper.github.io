@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<title>Extended Play</title>
+<meta charset="UTF-8">
+<meta name="author" content="Ruby Louise Rose">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+a:link {color:blue; background-color:transparent; text-decoration:none;}
+a:visited {color:blue; background-color:transparent; text-decoration: none;}
+body {overflow-y:scroll; font:16px monospace, monospace;}
+pre {margin:0; overflow-x:hidden; font-family: "Courier Prime", monospace;}
+span {display:inline-block;}
+audio {width: 100%;}
+@media (max-width:1280px) {body {font-size:1.94vw;}}
+</style>
+<script>
+var yourAudio = document.getElementById('yourAudio'),
+    ctrl = document.getElementById('audioControl');
 
+ctrl.onclick = function () {
+
+    // Update the Button
+    var pause = ctrl.innerHTML === 'pause!';
+    ctrl.innerHTML = pause ? 'Play' : 'Pause';
+
+    // Update the Audio
+    var method = pause ? 'pause' : 'play';
+    yourAudio[method]();
+
+    // Prevent Default Action
+    return false;
+};
+</script>
+</head>
+<body>
+<div style="display:table; margin:16px auto;">
+<div style="max-width:70ch;">
+<pre>
+<span id="000">+--------------------------------------------------------------------+</span>
+|                                                                    |
+|  Extended Play                                 [<a href="https://www.rubylouiserose.com" target="_blank">Ruby Louise Rose</a>]  |
+|                                                                    |
++--------------------------------------------------------------------+
+<audio id="yourAudio" preload='none'>
+    <source src="extendedplay.ogg" type='audio/ogg' />
+    <source src="extendedplay.mp3" type='audio/mpeg' />
+</audio>
+<a href="#" id="audioControl">Play</a>
+
+00:00 ............................................... Fun with Numbers
+03:30 ............................................ Fun with Tambourine
+06:56 .................................................. Fun with Acid
+10:21 ........................................... Fun with Oscillators
+
+______________________________________________________________________<br>
+Copyright (C) 2026 Ruby Louise Rose
+</pre>
+</div>
+</div>
+</body>
+</html>
