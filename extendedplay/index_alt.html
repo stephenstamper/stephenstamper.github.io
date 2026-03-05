@@ -20,26 +20,24 @@ audio {width: 100%;}
 </head>
 <body>
 <div style="display:table; margin:16px auto;">
-<div style="max-width:54ch;">
+<div style="max-width:70ch;">
 <pre>
-<span id="000">+----------------------------------------------------+</span>
-|                                                    |
-|  Extended Play                 [<a href="https://www.rubylouiserose.com" target="_blank">Ruby Louise Rose</a>]  |
-|                                                    |
-+----------------------------------------------------+
-|  Extended Play                 [Ruby Louise Rose]  |
+<span id="000">+--------------------------------------------------------------------+</span>
+|                                                                    |
+|  Extended <a href="#" id="audioControl">Play </a>                                [<a href="https://www.rubylouiserose.com" target="_blank">Ruby Louise Rose</a>]  |
+|                                                                    |
++--------------------------------------------------------------------+
 <audio id="yourAudio" preload="auto">
     <source src="extendedplay.ogg" type="audio/ogg">
     <source src="extendedplay.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
 </audio>
-<a href="#" id="audioControl">Play</a>
+00:00 ............................................... Fun with Numbers
+03:30 ............................................ Fun with Tambourine
+06:56 .................................................. Fun with Acid
+10:21 ........................................... Fun with Oscillators
 
-00:00 ............................... Fun with Numbers
-03:30 ............................ Fun with Tambourine
-06:56 .................................. Fun with Acid
-10:21 ........................... Fun with Oscillators
-
-______________________________________________________<br>
+______________________________________________________________________<br>
 Copyright (C) 2026 Ruby Louise Rose
 </pre>
 <script>
@@ -50,7 +48,7 @@ ctrl.onclick = function () {
 
     // Update the Button
     var pause = ctrl.innerHTML === 'Pause';
-    ctrl.innerHTML = pause ? 'Play' : 'Pause';
+    ctrl.innerHTML = pause ? 'Play ' : 'Pause';
 
     // Update the Audio
     var method = pause ? 'pause' : 'play';
